@@ -33,10 +33,6 @@ public class Main {
         String jdbcPass = System.getenv("JDBC-PASS");
         String cryptoPass = System.getenv("cryptor");
 
-        if (jdbcURL == null || jdbcURL.length() == 0) {
-            jdbcURL = "jdbc:mysql://localhost:3306/test";
-        }
-
         Sql2o sql2o = new Sql2o(jdbcURL, jdbcUser, jdbcPass);
         UserRepository userRepo = new UserRepository(sql2o, visitor);
         FileRepository fileRepo = new FileRepository(sql2o);
