@@ -64,13 +64,17 @@
     <!-- Bootstrap and jQuery JS files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body{
+            background-image: url("/media/background.jpg")
+        }
+    </style>
     <@head/>
 </head>
 <body>
 <div class="container">
     <@navbar userData/>
     <@content/>
-    <img style="margin-left: 300px" src="/media/cloud.png">
 </div>
 </body>
 </html>
