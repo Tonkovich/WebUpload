@@ -21,7 +21,6 @@ public class FileRepository {
 
     public void uploadFile(String UserID, InputStream is, String fileName) {
         String uploadSQL = "INSERT INTO Files (user_id, file, file_name) VALUES (:id,:file,:file_name)";
-        System.out.print(UserID);
         try (org.sql2o.Connection con = sql2o.open()) {
             con.createQuery(uploadSQL)
                     .addParameter("id", UserID)
