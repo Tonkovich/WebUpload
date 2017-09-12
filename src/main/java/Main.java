@@ -25,7 +25,7 @@ public class Main {
 
         // SSL Certificate
         String keyStorePass = System.getenv("keyStorePass");
-        secure("deploy/keyStore.jks", keyStorePass, null, null);
+        secure("deploy/mykeystore.jks", keyStorePass, null, null);
 
         // Set these environment variables to connect to your database
         String jdbcURL = System.getenv("JDBC-URL");
@@ -75,6 +75,7 @@ public class Main {
                 out.write(fileBuffer);
                 return "";
             });
+
 
             // File removal API
             post("/delete", (req, res) -> {
